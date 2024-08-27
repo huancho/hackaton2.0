@@ -13,7 +13,7 @@ export default function Home() {
     email: '',
     phone_number: '',
     message: '',
-    country: 'US', // Valor por defecto
+    country: 'US',
   });
 
   const handleChange = (e) => {
@@ -28,7 +28,7 @@ export default function Home() {
     console.log(formData);
 
     try {
-      const response = await fetch('http://34.44.71.226:3000/insert', {
+      const response = await fetch('https://051e-34-44-71-226.ngrok-free.app/insert', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -46,7 +46,7 @@ export default function Home() {
           email: '',
           phone_number: '',
           message: '',
-          country: 'US', // Valor por defecto
+          country: 'US',
         });
       } else {
         console.error('Failed to submit data');
@@ -81,7 +81,7 @@ export default function Home() {
       <form
         action="#"
         method="POST"
-        className="mx-auto mt-16 max-w-xl sm:mt-20"
+        className="mx-auto mt-8 max-w-xl sm:mt-20"
       >
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
           <div>
